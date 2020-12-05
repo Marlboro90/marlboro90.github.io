@@ -1,0 +1,96 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="写一些有的没的"><title>Hexo 常用命令 | YOUUNG 的部落阁</title><link rel="stylesheet" type="text/css" href="/article/css/style.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/article/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/article/favicon.ico"><link rel="apple-touch-icon" href="/article/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/article/apple-touch-icon.png"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css"><meta name="generator" content="Hexo 5.2.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Hexo 常用命令</h1><a id="logo" href="/article/.">YOUUNG 的部落阁</a><p class="description">斜杠中年，花样人生</p></div><div id="nav-menu"><a class="current" href="/article/."><i class="fa fa-home"> 首页</i></a><a href="/article/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/article/about/"><i class="fa fa-user"> 关于</i></a><a href="/article/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Hexo 常用命令</h1><div class="post-meta">2020-12-05</div><div class="post-content"><p>hexo一些常用命令，简写等。</p>
+<h1 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h1><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">npm</span> install hexo -g <span class="comment">#安装  </span></span><br><span class="line"><span class="built_in">npm</span> update hexo -g <span class="comment">#升级  </span></span><br><span class="line">hexo init <span class="comment">#初始化</span></span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<h1 id="简写"><a href="#简写" class="headerlink" title="简写"></a>简写</h1><p><code>hexo n &quot;我的博客&quot;</code>  == <code>hexo new &quot;我的博客&quot;</code>   #新建文章 <code>hexo p</code> == <code>hexo publish</code>   #发布草稿 <code>hexo g</code> == <code>hexo generate</code>   #生成 <code>hexo s</code> == <code>hexo server</code>   #启动服务预览 <code>hexo d</code> == <code>hexo deploy</code>   #部署</p>
+<h1 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h1><p><code>hexo server</code> #Hexo 会监视文件变动并自动更新，您无须重启服务器。 <code>hexo server -s</code> #静态模式 <code>hexo server -p 5000</code> #更改端口 <code>hexo server -i 192.168.1.1</code> #自定义 IP</p>
+<p><code>hexo clean</code> #清除缓存 网页正常情况下可以忽略此条命令 <code>hexo g</code> #生成静态网页 <code>hexo d</code> #开始部署</p>
+<h3 id="监视文件变动"><a href="#监视文件变动" class="headerlink" title="监视文件变动"></a>监视文件变动</h3><p><code>hexo generate</code> #使用 Hexo 生成静态文件快速而且简单 <code>hexo generate --watch</code> #监视文件变动</p>
+<h3 id="完成后部署"><a href="#完成后部署" class="headerlink" title="完成后部署"></a>完成后部署</h3><blockquote>
+<p>两个命令的作用是相同的 hexo generate –deploy hexo deploy –generate</p>
+</blockquote>
+<p>简写： <code>hexo deploy -g</code> #完成后部署 <code>hexo server -g</code> #完成后启动本地服务，可通过默认端口预览访问</p>
+<h1 id="模版"><a href="#模版" class="headerlink" title="模版"></a>模版</h1><p><code>hexo new &quot;postName&quot;</code> </p>
+<p>#新建文章</p>
+<p> <code>hexo new page &quot;pageName&quot;</code> </p>
+<p>#新建页面 <code>hexo generate</code> </p>
+<p>#生成静态页面至public目录 </p>
+<p><code>hexo server</code> </p>
+<p>#开启预览访问端口（默认端口4000，’ctrl + c’关闭server）</p>
+<p> <code>hexo deploy</code> </p>
+<p>#将.deploy目录部署到GitHub</p>
+<ul>
+<li><p><code>hexo new [layout] &lt;title&gt;hexo </code></p>
+</li>
+<li><p><code>new photo &quot;My Gallery&quot;</code></p>
+</li>
+<li><p><code>hexo new &quot;Hello World&quot; --lang tw</code></p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>layout</td>
+<td align="left">布局</td>
+</tr>
+<tr>
+<td>title</td>
+<td align="left">标题</td>
+</tr>
+<tr>
+<td>date</td>
+<td align="left">文件建立日期</td>
+</tr>
+</tbody></table>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">使用Hexo搭建个人博客</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">post</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020-12-05 19:07:43</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">true</span>  <span class="comment">#是否允许评论</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">Blog</span>  <span class="comment">#所在目录</span></span><br><span class="line"><span class="attr">tags:</span> [<span class="string">Hexo</span>]  <span class="comment">#标签</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="string">Hexo,</span> <span class="string">Blog,关键词</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">页面描述</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="模版（Scaffold）"><a href="#模版（Scaffold）" class="headerlink" title="模版（Scaffold）"></a>模版（Scaffold）</h1><figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo <span class="keyword">new</span> <span class="type">photo</span> <span class="string">&quot;My Gallery&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="设置文章摘要"><a href="#设置文章摘要" class="headerlink" title="设置文章摘要"></a>设置文章摘要</h1><p>以上是文章摘要 <code>&lt;!--more--&gt;</code> 以下是余下全文</p>
+<h1 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h1><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new<span class="built_in"> page </span>&lt;title&gt;` `hexo new post &lt;title&gt;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>:title</td>
+<td align="left">标题</td>
+</tr>
+<tr>
+<td>:year</td>
+<td align="left">建立的年份（4 位数）</td>
+</tr>
+<tr>
+<td>:month</td>
+<td align="left">建立的月份（2 位数）</td>
+</tr>
+<tr>
+<td>:i_month</td>
+<td align="left">建立的月份（去掉开头的零）</td>
+</tr>
+<tr>
+<td>:day</td>
+<td align="left">建立的日期（2 位数）</td>
+</tr>
+<tr>
+<td>:i_day</td>
+<td align="left">建立的日期（去掉开头的零）</td>
+</tr>
+</tbody></table>
+<p>推送到服务器上</p>
+<p> <code>hexo n</code> </p>
+<p>#写文章 </p>
+<p><code>hexo g</code> </p>
+<p>#生成 </p>
+<p><code>hexo d</code> </p>
+<p>#部署 </p>
+<p>#可与<code>hexo g</code>合并为 <code>hexo d -g</code></p>
+</div><div class="tags"><a href="/article/tags/hexo%E5%91%BD%E4%BB%A4-hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-hexocommands/"><i class="fa fa-tag"></i>hexo命令,hexo常用命令,hexocommands</a></div><div class="post-nav"><a class="next" href="/article/2020/11/12/hello-world/">YOUUNG的部落阁</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" target="_blank"><input type="search" name="word" maxlength="20" placeholder="Search"/><input type="hidden" name="si" value="https://www.youung.com/article"/><input name="tn" type="hidden" value="bds"/><input name="cl" type="hidden" value="3"/><input name="ct" type="hidden" value="2097152"/><input name="s" type="hidden" value="on"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/article/tags/hexo%E5%91%BD%E4%BB%A4-hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4-hexocommands/" style="font-size: 15px;">hexo命令,hexo常用命令,hexocommands</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/article/2020/12/05/hexo-commands/">Hexo 常用命令</a></li><li class="post-list-item"><a class="post-list-link" href="/article/2020/11/12/hello-world/">YOUUNG的部落阁</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://www.w3cschool.cn/" title="编程狮" target="_blank">编程狮</a><ul></ul><a href="http://www.iskeys.com/" title="翻滚的胖子博客" target="_blank">翻滚的胖子博客</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2020 <a href="/article/." rel="nofollow">YOUUNG 的部落阁.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/article/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/article/js/fancybox.js?v=1.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"><script type="text/javascript" src="/js/copycode.js" successtext="复制成功!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/article/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/article/js/smartresize.js?v=1.0.0"></script></div></body></html>
